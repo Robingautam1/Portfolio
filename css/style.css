@@ -245,7 +245,7 @@ img {
     align-items: center;
     position: relative;
     color: #fff;
-    background: linear-gradient(rgba(26, 35, 64, 0.85), rgba(26, 35, 64, 0.7)), url('../assets/hero-bg.png');
+    /* Background image moved to inline HTML for better path resolution */
     background-size: cover;
     background-position: center;
     /* background-attachment: fixed; Removed for better mobile support */
