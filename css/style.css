@@ -248,7 +248,7 @@ img {
     background: linear-gradient(rgba(26, 35, 64, 0.85), rgba(26, 35, 64, 0.7)), url('../assets/hero-bg.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; Removed for better mobile support */
 }
 
 .hero-content {
@@ -755,20 +755,22 @@ footer {
         margin-left: 0;
     }
 }
+
 /* Profile Photo */
 .profile-photo {
     width: 100%;
     height: auto;
     border-radius: var(--radius);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     transition: var(--transition);
     object-fit: cover;
-    max-height: 500px; /* Prevent it from being too tall */
+    max-height: 500px;
+    /* Prevent it from being too tall */
 }
 
 .profile-photo:hover {
     transform: scale(1.02);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
 }
 
 /* Interactive Timeline Updates */
@@ -818,7 +820,8 @@ footer {
 
 /* Timeline Content Enhancements */
 .timeline-item .content {
-    border-left: none; /* Remove old border */
+    border-left: none;
+    /* Remove old border */
     border-top: 4px solid transparent;
     transition: all 0.4s ease;
 }
@@ -826,7 +829,7 @@ footer {
 .timeline-item:hover .content {
     border-top-color: var(--accent-color);
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .timeline-tag {
@@ -852,7 +855,8 @@ footer {
     bottom: 0;
     left: 50%;
     margin-left: -2px;
-    height: 0; /* Starts empty */
+    height: 0;
+    /* Starts empty */
     transition: height 0.5s ease;
     z-index: 0;
 }
@@ -889,8 +893,9 @@ footer {
     font-size: 1.5rem;
     background: #fff;
     color: var(--primary-color);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy transition */
     border: 2px solid transparent;
 }
 
@@ -899,13 +904,15 @@ footer {
 }
 
 .social-btn.email:hover {
-    background: #EA4335; /* Gmail Red */
+    background: #EA4335;
+    /* Gmail Red */
     color: #fff;
     box-shadow: 0 15px 30px rgba(234, 67, 53, 0.4);
 }
 
 .social-btn.linkedin:hover {
-    background: #0077B5; /* LinkedIn Blue */
+    background: #0077B5;
+    /* LinkedIn Blue */
     color: #fff;
     box-shadow: 0 15px 30px rgba(0, 119, 181, 0.4);
 }
@@ -917,7 +924,7 @@ footer {
 
 .contact-form:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .form-group input:focus,
@@ -973,9 +980,17 @@ footer {
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(20px, -20px); }
-    100% { transform: translate(0, 0); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 /* Ensure content stays above background */
@@ -999,16 +1014,25 @@ footer {
     transform: translateY(30px);
     animation: fadeInUp 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
     margin-bottom: 0.5rem;
-    color: #fff; /* Ensure white text on dark bg */
-    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    color: #fff;
+    /* Ensure white text on dark bg */
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.hero-line.delay-1 { animation-delay: 0.2s; }
-.hero-line.delay-2 { animation-delay: 1.2s; }
-.hero-line.delay-3 { 
-    animation-delay: 2.2s; 
-    font-size: 2.2rem; /* Slightly smaller for the longer final line */
-    color: var(--accent-color); /* Highlight the people part */
+.hero-line.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.hero-line.delay-2 {
+    animation-delay: 1.2s;
+}
+
+.hero-line.delay-3 {
+    animation-delay: 2.2s;
+    font-size: 2.2rem;
+    /* Slightly smaller for the longer final line */
+    color: var(--accent-color);
+    /* Highlight the people part */
     font-weight: 600;
 }
 
@@ -1020,8 +1044,13 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .hero-line { font-size: 2.5rem; }
-    .hero-line.delay-3 { font-size: 1.5rem; }
+    .hero-line {
+        font-size: 2.5rem;
+    }
+
+    .hero-line.delay-3 {
+        font-size: 1.5rem;
+    }
 }
 
 /* Project Link Icon */
