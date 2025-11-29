@@ -1268,3 +1268,67 @@ footer {
     .case-card { padding: 1.5rem; }
     .next-content { font-size: 1.1rem; }
 }
+
+/* --- COMPACT LEADERSHIP CARDS --- */
+.subsection-title {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.compact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.compact-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.compact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: var(--accent-color);
+}
+
+.compact-icon {
+    min-width: 45px;
+    height: 45px;
+    background: rgba(26, 35, 64, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.compact-content h4 {
+    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.compact-role {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.compact-content p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
