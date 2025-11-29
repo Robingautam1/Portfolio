@@ -1332,3 +1332,19 @@ footer {
     color: #555;
     line-height: 1.4;
 }
+
+/* Narrative Text Style */
+.narrative-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.narrative-text strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
