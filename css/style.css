@@ -1065,3 +1065,206 @@ footer {
     transform: scale(1.2) rotate(15deg);
     color: var(--primary-color);
 }
+/* --- RECRUITER FRIENDLY UPDATES --- */
+
+/* 1. Hero Updates */
+.hero-line {
+    font-size: 3rem; /* Slightly smaller to fit 2 lines nicely */
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.btn-lg {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px; /* Rounded pill shape */
+}
+
+/* 2. Case Study Cards (Impact Section) */
+.case-card {
+    border-left: 5px solid var(--accent-color);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.case-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.case-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(26, 35, 64, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.case-study {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.cs-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.cs-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    font-weight: 700;
+}
+
+.cs-row p {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.cs-row strong {
+    color: var(--primary-color);
+    background: rgba(255, 193, 7, 0.2);
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+/* 3. AI Tools Grid Update */
+.ai-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Wider cards */
+    gap: 2rem;
+}
+
+.ai-card {
+    text-align: left;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+}
+
+.ai-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ai-header .icon {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 193, 7, 0.1);
+    border-radius: 8px;
+}
+
+.ai-purpose {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ai-result {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ai-result strong {
+    color: var(--accent-color);
+}
+
+/* 4. Timeline Future Text */
+.timeline-future {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+}
+
+/* 5. Next Section */
+.next-section {
+    background: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.next-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.highlight-text {
+    margin-top: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* 6. Scroll to Top */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.scroll-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: var(--accent-color);
+    color: #000;
+    transform: translateY(-5px);
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    .hero-line { font-size: 2rem; }
+    .btn-lg { padding: 1rem 2rem; font-size: 1rem; }
+    .case-card { padding: 1.5rem; }
+    .next-content { font-size: 1.1rem; }
+}

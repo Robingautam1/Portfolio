@@ -35,11 +35,44 @@ document.addEventListener('DOMContentLoaded', () => {
                 element.classList.add('visible');
             }
         });
+
+        // Timeline Active State
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < windowHeight * 0.8 && rect.bottom > 0) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+
+        // Scroll to Top Visibility
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        if (scrollTopBtn) { // Ensure the button exists before trying to modify it
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        }
     };
 
     window.addEventListener('scroll', revealOnScroll);
     // Trigger once on load
     revealOnScroll();
+
+    // Scroll to Top Click
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    if (scrollTopBtn) { // Ensure the button exists before adding an event listener
+        scrollTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
     // Smooth Scrolling for Navigation Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
