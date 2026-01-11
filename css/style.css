@@ -1,21 +1,27 @@
 /* Reset & Base Styles */
 :root {
-    --primary-color: #1a1a40;
-    /* Deep Blue/Indigo like Xetgo */
-    --secondary-color: #2b2b5c;
-    /* Slightly lighter blue for cards */
+    --primary-color: #0a1628;
+    /* Dark Navy matching Personal-website */
+    --secondary-color: #0f1f3a;
+    /* Slightly lighter navy for cards */
     --accent-color: #FFC107;
-    /* Vibrant Yellow */
+    /* Vibrant Yellow - matches Personal-website */
     --text-color-dark: #f0f0f0;
     /* White/Off-white for dark backgrounds */
-    --text-color-light: #333333;
-    /* Dark text for light areas */
-    --bg-color: #f4f6f8;
-    /* Light grey for non-hero sections to keep it clean */
-    --font-main: 'Nunito', sans-serif;
-    --font-heading: 'Poppins', sans-serif;
-    --transition: all 0.3s ease;
-    --radius: 12px;
+    --text-color-light: #1a1a1a;
+    /* Dark text matching Personal-website */
+    --bg-color: #f4f4f4;
+    /* Light grey matching Personal-website */
+    --font-main: 'Montserrat', 'Inter', sans-serif;
+    /* Matching Personal-website fonts */
+    --font-heading: 'Montserrat', sans-serif;
+    /* Matching Personal-website fonts */
+    --transition: all 0.25s ease;
+    /* Matching Personal-website transition */
+    --radius: 8px;
+    /* Matching Personal-website border radius */
+    --radius-lg: 16px;
+    --radius-pill: 50px;
 }
 
 * {
@@ -100,9 +106,10 @@ img {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 0.9rem 2rem;
-    border-radius: 5px;
-    /* Slightly squarer like Xetgo */
+    padding: 0.875rem 2.25rem;
+    /* Matching Personal-website button padding */
+    border-radius: var(--radius-pill);
+    /* Pill-shaped like Personal-website */
     font-weight: 700;
     cursor: pointer;
     border: none;
@@ -170,8 +177,8 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(26, 35, 126, 0.95);
-    /* Dark Blue */
+    background-color: rgba(10, 22, 40, 0.95);
+    /* Dark Navy matching Personal-website */
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
@@ -1065,11 +1072,13 @@ footer {
     transform: scale(1.2) rotate(15deg);
     color: var(--primary-color);
 }
+
 /* --- RECRUITER FRIENDLY UPDATES --- */
 
 /* 1. Hero Updates */
 .hero-line {
-    font-size: 3rem; /* Slightly smaller to fit 2 lines nicely */
+    font-size: 3rem;
+    /* Slightly smaller to fit 2 lines nicely */
     font-weight: 800;
     letter-spacing: -1px;
 }
@@ -1077,7 +1086,8 @@ footer {
 .btn-lg {
     padding: 1.2rem 2.5rem;
     font-size: 1.1rem;
-    border-radius: 50px; /* Rounded pill shape */
+    border-radius: 50px;
+    /* Rounded pill shape */
 }
 
 /* 2. Case Study Cards (Impact Section) */
@@ -1149,7 +1159,8 @@ footer {
 
 /* 3. AI Tools Grid Update */
 .ai-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Wider cards */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Wider cards */
     gap: 2rem;
 }
 
@@ -1247,7 +1258,7 @@ footer {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 999;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .scroll-top.active {
@@ -1263,10 +1274,22 @@ footer {
 
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
-    .hero-line { font-size: 2rem; }
-    .btn-lg { padding: 1rem 2rem; font-size: 1rem; }
-    .case-card { padding: 1.5rem; }
-    .next-content { font-size: 1.1rem; }
+    .hero-line {
+        font-size: 2rem;
+    }
+
+    .btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .case-card {
+        padding: 1.5rem;
+    }
+
+    .next-content {
+        font-size: 1.1rem;
+    }
 }
 
 /* --- COMPACT LEADERSHIP CARDS --- */
@@ -1290,14 +1313,14 @@ footer {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     border: 1px solid #eee;
 }
 
 .compact-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     border-color: var(--accent-color);
 }
 
